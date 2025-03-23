@@ -110,36 +110,37 @@ export default function Home() {
 
     <section className="min-h-screen bg-black text-white flex justify-center relative">
 
-  {/* Background Image */}
-  <div className="relative w-full h-screen">
-    <Image
-      src="/images/hero-img2.jpeg"
-      alt="Tattoo Woman"
-      fill 
-      className="object-cover w-full h-full "
-    />
+{/* Background Image */}
+<div className="relative w-full h-screen">
+  <Image
+    src="/images/hero-img2.jpeg"
+    alt="Tattoo Woman"
+    fill
+    className="object-cover w-full h-full"
+  />
 
-    {/* Left Content */}
-    <div className="absolute top-28 left-14 md:top-32 md:left-20 p-4 md:p-12 text-center md:text-left ">
-      <h1 className={`text-5xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight mb-4 md:mb-6 ${rye.className}`}>
-        HIGH <br /> INKPACT <br /> TATTOOS
-      </h1>
-    </div>
-
-    {/* Right Content */}
-    <div className="absolute bottom-14 md:bottom-6 right-4 md:right-16 max-w-[90%] sm:max-w-sm md:max-w-md  p-4 md:p-6 text-end text-sm  text-white space-y-4 md:space-y-6">
-      <p className="">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sit ex doloremque maiores alias recusandae quod deleniti aliquid quos quae hic repellendus harum est atque quas corporis rerum, ullam consequuntur!
-      </p>
-      <div className="flex items-center justify-end gap-2 group cursor-pointer">
-        <div className="w-20 h-px bg-white transform group-hover:translate-x-1 transition" />
-        <span className="text-sm md:text-base">EXPLORE</span>
-      </div>
-    </div>
-
+  {/* Left Content */}
+  <div className="absolute top-28 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-20 md:top-32 p-4 md:p-12 text-center md:text-left">
+    <h1 className={`text-5xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight mb-4 md:mb-6 ${rye.className}`}>
+      HIGH <br /> INKPACT <br /> TATTOOS
+    </h1>
   </div>
 
+  {/* Right Content */}
+  <div className="absolute bottom-14 md:bottom-6 right-4 md:right-16 max-w-[90%] sm:max-w-sm md:max-w-md p-4 md:p-6 text-end text-sm text-white space-y-4 md:space-y-6">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sit ex doloremque maiores alias recusandae quod deleniti aliquid quos quae hic repellendus harum est atque quas corporis rerum, ullam consequuntur!
+    </p>
+    <div className="flex items-center justify-end gap-2 group cursor-pointer">
+      <div className="w-20 h-px bg-white transform group-hover:translate-x-1 transition" />
+      <span className="text-sm md:text-base">EXPLORE</span>
+    </div>
+  </div>
+
+</div>
+
 </section>
+
 
 
 
@@ -160,21 +161,33 @@ export default function Home() {
 <div className="container mx-auto px-4">
       {/* Artist Section */}
       <section className="relative p-12 py-20 md:pt-32">
-        <div className=" flex justify-center items-center ">
-          <Image src='/images/images.png' width={450} height={450} alt="artist-img" className="rounded-full z-10"/>
-        </div>
-        <div className={`absolute top-0 left-0 md:top-38 md:left-14 text-[5.5rem] md:text-8xl z-0 text-[#1E1E1E] ${rye.className}`}>
-          <p>ARTIST</p>
-          <p>ARTIST</p>
-          <p>ARTIST</p>
-          <p>ARTIST</p>
-        </div>
-          <h3 className={`absolute top-10 md:top-18 right-18 text-4xl md:text-[5.5rem] text-center md:text-end uppercase mb-4 text-stroke-2 text-stroke-black z-20  ${rye.className}`}>Nelson De <br/> Almeida</h3>
-        <div className="relative bottom-10 md:bottom-20 w-full flex flex-col md:flex-row justify-between md:items-end items-center text-center md:text-left mt-8 md:mt-0 z-20">
-          <p className="text-sm max-w-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,</p>
-          <button className="mt-4 border px-4 py-2">Read More</button>
-        </div>
-      </section>
+  {/* Center Artist Image */}
+  <div className="flex justify-center items-center">
+    <Image src='/images/images.png' width={450} height={450} alt="artist-img" className="rounded-full z-10" />
+  </div>
+
+  {/* Background Artist Text */}
+  <div className={`absolute top-0 left-0 md:top-38 md:left-14 text-[5.5rem] md:text-8xl z-0 text-[#1E1E1E] ${rye.className}`}>
+    <p>ARTIST</p>
+    <p>ARTIST</p>
+    <p>ARTIST</p>
+    <p>ARTIST</p>
+  </div>
+
+  {/* Artist Name */}
+  <h3 className={`absolute top-10 left-1/2 -translate-x-1/2 md:translate-x-0 md:top-18 right-auto md:right-18 text-4xl md:text-[5.5rem] text-center md:text-end uppercase mb-4 text-stroke-2 text-stroke-black z-20 w-full md:w-auto ${rye.className} `}>
+    Nelson De <br /> Almeida
+  </h3>
+
+  {/* Bottom Content */}
+  <div className="relative bottom-10 md:bottom-20 w-full flex flex-col md:flex-row justify-between md:items-end items-center text-center md:text-left mt-8 md:mt-0 z-20">
+    <p className="text-sm max-w-lg">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+    </p>
+    <button className="mt-4 border px-4 py-2">Read More</button>
+  </div>
+</section>
+
 
       {/* Art Showcase */}
       <section className="text-white md:py-12">
