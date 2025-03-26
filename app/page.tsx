@@ -28,7 +28,7 @@ export default function Home() {
       description: "Committed to precision in every detail.",
     },
     {
-      icon: '/images/passion.svg',
+      icon: '/images/passion.png',
       title: "Passion",
       description: "Driven by love for the art of tattooing.",
     },
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Centered Logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 text-white text-center font-bold leading-tight tracking-wide text-xs md:text-lg">
+        <div className="absolute  left-1/2 transform -translate-x-1/2 text-white text-center font-bold leading-tight tracking-wide text-xs md:text-lg ">
           HIGH INKPACT<br />TATTOOS
         </div>
 
@@ -85,12 +85,12 @@ export default function Home() {
       {/* Mobile Drawer */}
       <div
         className={`fixed top-0 left-0 h-full w-2/3 bg-black bg-opacity-90 text-white transform ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out md:hidden z-50 flex flex-col space-y-6 p-8`}
+          menuOpen ? "translate-x-0 " : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:hidden z-50 flex flex-col space-y-6 p-8 `}
       >
         <button
           onClick={() => setMenuOpen(false)}
-          className="self-end mb-8"
+          className="self-start mb-8"
         >
           <FiX size={28} />
         </button>
@@ -113,10 +113,10 @@ export default function Home() {
 {/* Background Image */}
 <div className="relative w-full h-screen">
   <Image
-    src="/images/hero-img2.jpeg"
+    src="/images/hero-img4.jpg"
     alt="Tattoo Woman"
     fill
-    className="object-cover w-full h-full"
+    className="object-cover object-[35%] md:object-center w-full h-full"
   />
 
   {/* Left Content */}
@@ -132,8 +132,10 @@ export default function Home() {
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sit ex doloremque maiores alias recusandae quod deleniti aliquid quos quae hic repellendus harum est atque quas corporis rerum, ullam consequuntur!
     </p>
     <div className="flex items-center justify-end gap-2 group cursor-pointer">
-      <div className="w-20 h-px bg-white transform group-hover:translate-x-1 transition" />
+    <Link href="#artist" className=" mt-4  px-4 py-2 flex items-center gap-5 group w-auto ">
+    <Image src={`/arrow_left.svg`} width={80} height={50} alt="arrow" className=" group-hover:-rotate-90   group-hover:translate-x-1/2 translate ease-in-out duration-700 "/>
       <span className="text-sm md:text-base">EXPLORE</span>
+      </Link>
     </div>
   </div>
 
@@ -160,7 +162,7 @@ export default function Home() {
 
 <div className="container mx-auto px-4">
       {/* Artist Section */}
-      <section className="relative p-12 py-20 md:pt-32">
+      <section className="relative p-12 py-20 md:pt-32" id="artist">
   {/* Center Artist Image */}
   <div className="flex justify-center items-center">
     <Image src='/images/images.png' width={450} height={450} alt="artist-img" className="rounded-full z-10" />
@@ -175,16 +177,19 @@ export default function Home() {
   </div>
 
   {/* Artist Name */}
-  <h3 className={`absolute top-10 left-1/2 -translate-x-1/2 md:translate-x-0 md:top-18 right-auto md:right-18 text-4xl md:text-[5.5rem] text-center md:text-end uppercase mb-4 text-stroke-2 text-stroke-black z-20 w-full md:w-auto ${rye.className} `}>
+  <h3 className={`absolute top-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:top-18 right-auto md:right-18 text-4xl md:text-[5.5rem] text-center md:text-end uppercase mb-4 text-stroke-2 text-stroke-black z-20 w-full md:w-auto ${rye.className} `}>
     Nelson De <br /> Almeida
   </h3>
 
   {/* Bottom Content */}
   <div className="relative bottom-10 md:bottom-20 w-full flex flex-col md:flex-row justify-between md:items-end items-center text-center md:text-left mt-8 md:mt-0 z-20">
     <p className="text-sm max-w-lg">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
     </p>
-    <button className="mt-4 border px-4 py-2">Read More</button>
+    <button className="relative mt-4 border px-4 py-2 flex gap-5 group">
+      <p className="">Read More</p>
+    <Image src={`/arrow_left.svg`} width={200} height={50} alt="arrow" className="hidden md:block absolute top-0 left-0 flex inset-0 -translate-x-1/2 group-hover:rotate-180   group-hover:translate-x-1/2 translate ease-in-out duration-700 "/>
+      </button>
   </div>
 </section>
 
@@ -222,7 +227,10 @@ export default function Home() {
 
 
   <div className="flex justify-center mt-8">
-  <button className="mt-4 border px-4 py-2">View More</button>
+  <button className="relative mt-4 border px-4 py-2 flex gap-5 group">
+      <p className="">View More</p>
+    <Image src={`/arrow_left.svg`} width={200} height={50} alt="arrow" className="hidden md:block absolute top-0 left-0 flex inset-0 -translate-x-1/2 group-hover:rotate-180   group-hover:translate-x-1/2 translate ease-in-out duration-700 "/>
+      </button>
   </div>
 </section>
 
@@ -348,7 +356,7 @@ export default function Home() {
     placeholder="Message"
     className="w-full bg-black border-b border-white p-2 focus:outline-none placeholder-white placeholder-opacity-70"
   />
-  <button className="mt-4 border px-4 py-2">Send</button>
+  <button className="mt-4 border px-4 py-2 translate ease-in-out duration-700 hover:bg-white hover:text-black hover:font-semibold">Send</button>
 </div>
 
 
