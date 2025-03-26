@@ -116,7 +116,7 @@ export default function Home() {
     src="/images/hero-img4.jpg"
     alt="Tattoo Woman"
     fill
-    className="object-cover object-[35%] md:object-center w-full h-full"
+    className="object-cover object-[28%] md:object-center w-full h-full"
   />
 
   {/* Left Content */}
